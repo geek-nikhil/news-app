@@ -127,16 +127,27 @@ footer {
     gap: 1rem;
 }
 
+button:hover{
+    background-color: #ceb0e3a1; /* Dark Purple */
+}
+
+#navigationButtons >button{
+    border-radius:100px;
+}
+
 
 #navigationButtons {
+    font-family:sans-serif;
+    color:browm;
     position: absolute;
     border: none;
     padding: 10px 20px;
     top: 1200px;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
-    width: 490px;
-   right: 480px;
+    width: 390px;
+    height: 60px;
+   right: 549px;
    grid-template-columns:repeat(2,2fr);
    display: grid;
    gap: 39px;
@@ -386,5 +397,11 @@ hr{
   .google-search-button:focus {
     outline: none;
     box-shadow: 0 0 5px rgba(66, 133, 244, 0.5);
+  }
+  
+
+  a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color from parent */
   }
   

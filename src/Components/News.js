@@ -48,6 +48,7 @@ function search() {
                 title: data.articles[i].title.slice(0,60)+ ". . . ",
                 content: data.articles[i].description.slice(0,120) + ". . .",
                 image: data.articles[i].urlToImage,
+                url:data.articles[i].url,
             });
             t++;
         }
@@ -61,15 +62,18 @@ function search() {
 
 console.log(k);
 
-function createCard(title, content, image) {
+function createCard(title, content, image,url) {
     const card = document.createElement('div');
     card.classNameName = 'card';
+    console.log(url)
     card.innerHTML = `
+    <a href="${url}"  target="_blank" rel="noopener noreferrer">
       <div id="cards">
         <img src="${image}" id="img">
         <h3>${title}</h3>
         <p>${content}</p>
         <div/>
+        </a>
     `;
     return card;
 }
@@ -79,7 +83,7 @@ function addCardsToContainer(data) {
     cardContainer.innerHTML = " ";
     data.forEach(item => {
         if(item.image!==null){
-        const card = createCard(item.title, item.content, item.image);
+        const card = createCard(item.title, item.content, item.image,item.url);
         cardContainer.appendChild(card);
         }
     });
@@ -131,6 +135,8 @@ function decrepage(){
 
   <div id="cardContainer">
   </div>
+
+  
 <div id="navigationButtons" >
     <button onClick={decrepage} id="prevButton"> Previous</button>
     <button onClick={increpage} id="nextButton">Next </button>
