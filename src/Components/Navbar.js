@@ -4,24 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Navbar() {
     
-    const [city, setCity] = useState('');
-
-    const handleInputChange = (event) => {
-      setCity(event.target.value);
-    };
-  
-    const handleSearch = () => {
-      // Implement your search logic here
-      console.log(`Searching for ${city}`);
-    };
-  
-    const handleLocationClick = () => {
-      // Implement your location logic here
-      console.log('Getting user location');
-    };
-    function handle(){
-        console.log("sdvjbsfv");
-       }
   return (
     <>
            
@@ -41,10 +23,10 @@ export default function Navbar() {
               <Link className="nav-link active" aria-current="page" to="/">Home</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/facts">Weather News</Link>
+              <Link className="nav-link" to="/">News</Link>
             </li>
             <li className="nav-item dropdown">
-              <Link className="nav-link dropdown-toggle" to="/contact" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <Link className="nav-link dropdown-toggle" to="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Contact us
               </Link>
               <ul className="dropdown-menu">

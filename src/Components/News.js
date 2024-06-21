@@ -78,7 +78,6 @@ function addCardsToContainer(data) {
     const cardContainer = document.getElementById('cardContainer');
     cardContainer.innerHTML = " ";
     data.forEach(item => {
-        console.log(item.image);
         if(item.image!==null){
         const card = createCard(item.title, item.content, item.image);
         cardContainer.appendChild(card);
@@ -116,19 +115,22 @@ function decrepage(){
 
   return (
    <>
-              <input className="form-control me-2" type="text" id="search-input" placeholder="Search" aria-label="Search"/>
-      <button className="google-search-button" onClick={search}>Search</button>
+ <div id="searchbar">
+      <input
+        className="f-2"
+        type="text"
+        id="search-input"
+        placeholder="Search"
+        aria-label="Search"
+      />
+      <button className="google-search-button" onClick={search}>
+        Search
+      </button>
+    </div>
+                    
 
-                   
-    <div className="">
-        
-        <input type="text"  placeholder="Search..."/>
-        <button className="" >Search</button>
-    </div> 
-
-<div id="cardContainer">
-  
-</div>
+  <div id="cardContainer">
+  </div>
 <div id="navigationButtons" >
     <button onClick={decrepage} id="prevButton"> Previous</button>
     <button onClick={increpage} id="nextButton">Next </button>

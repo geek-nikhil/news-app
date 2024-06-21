@@ -115,7 +115,7 @@ footer {
    margin-bottom: 5px;
    border-radius: 10px;
    position: relative;
-   left: -15px;
+   left: -1px;
 }
 
 .search-container {
@@ -127,34 +127,9 @@ footer {
     gap: 1rem;
 }
 
-#search-input {
-    width: 300px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
-}
-
-.search-button {
-    margin-top: 0px;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    #search-input {
-        width: 200px;
-    }
-}
 
 #navigationButtons {
     position: absolute;
-    background-color: #007BFF;
-    color: #fff;
     border: none;
     padding: 10px 20px;
     top: 1200px;
@@ -359,22 +334,57 @@ hr{
 
 
 
-.google-search-button {
-    background-color: #e8edf7; /* Google Blue */
-    color: #0f53f3;
-    padding: 10px 16px;
-    font-size: 14px;
-    border: solid 2px #0f53f3;
-    border-radius: 20px ;
+
+#nextButton , #prevButton{
+    background-color: #357ae8; /* Darker Google Blue */
+}
+
+/* styles.css */
+#searchbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  #search-input {
+    width: 400px;
+    height: 40px;
+    padding: 0 20px;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px 0 0 24px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  #search-input:focus {
+    border-color: #4285f4;
+  }
+  
+  .google-search-button {
+    height: 42px;
+    padding: 0 20px;
+    border: 1px solid #dfe1e5;
+    border-left: none;
+    border-radius: 0 24px 24px 0;
+    background-color: #4285f4;
+    color: white;
+    font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
-    width: 100px;
-    font-size: medium;
-    height: 50px;
-}
-
-.google-search-button:hover {
-    background-color: #357ae8; /* Darker Google Blue */
-    color: #f9f5f5;
-}
-
+  }
+  
+  .google-search-button:hover {
+    background-color: #357ae8;
+  }
+  
+  .google-search-button:active {
+    background-color: #2a65c7;
+  }
+  
+  .google-search-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(66, 133, 244, 0.5);
+  }
+  
